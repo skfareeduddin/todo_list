@@ -46,10 +46,7 @@ class HomeScreen extends StatelessWidget {
           goToAddNote(context);
         },
         backgroundColor: Colors.blueAccent,
-        child: const Icon(
-          Icons.add,
-          color: Colors.black,
-        ),
+        child: const Icon(Icons.add),
       ),
       body: SafeArea(
         child: Consumer<NoteProvider>(
