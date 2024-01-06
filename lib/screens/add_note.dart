@@ -45,8 +45,8 @@ class _AddNoteScreenState extends State<AddNoteScreen> {
             'Note created successfully!',
             style: TextStyle(fontSize: 16.0),
           ),
+          duration: Duration(seconds: 2),
         );
-        print('Note created');
         Navigator.pop(context);
         ScaffoldMessenger.of(context).showSnackBar(snackBar);
       } else {
@@ -56,6 +56,7 @@ class _AddNoteScreenState extends State<AddNoteScreen> {
             style: TextStyle(fontSize: 16.0),
           ),
           backgroundColor: Colors.red,
+          duration: Duration(seconds: 2),
         );
         ScaffoldMessenger.of(context).showSnackBar(snackBar);
       }

@@ -50,6 +50,7 @@ class _EditNoteScreenState extends State<EditNoteScreen> {
             'Note edited successfully!',
             style: TextStyle(fontSize: 16.0),
           ),
+          duration: Duration(seconds: 2),
         );
         ScaffoldMessenger.of(context).showSnackBar(snackBar);
         Navigator.pop(context);
@@ -60,6 +61,7 @@ class _EditNoteScreenState extends State<EditNoteScreen> {
             style: TextStyle(fontSize: 16.0),
           ),
           backgroundColor: Colors.red,
+          duration: Duration(seconds: 2),
         );
         ScaffoldMessenger.of(context).showSnackBar(snackBar);
       }
