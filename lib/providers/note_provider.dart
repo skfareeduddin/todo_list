@@ -14,7 +14,7 @@ class NoteProvider extends ChangeNotifier {
 
   Future<void> _loadNotes() async {
     final notes = await _databaseHelper.getNotes();
-    _notes = notes;
+    _notes = _sortNotes(notes);
     notifyListeners();
   }
 
@@ -22,14 +22,20 @@ class NoteProvider extends ChangeNotifier {
     await _databaseHelper.saveNotes(_notes);
   }
 
+  List<Note> _sortNotes(List<Note> notes) {
+    return notes..sort((a, b) => b.timeStamp.compareTo(a.timeStamp));
+  }
+
   void addNote(Note note) {
     _notes.add(note);
+    _notes = _sortNotes(_notes);
     _saveNotes();
     notifyListeners();
   }
 
   void editNote(int index, Note updatedNote) {
     _notes[index] = updatedNote;
+    _notes = _sortNotes(_notes);
     _saveNotes();
     notifyListeners();
   }

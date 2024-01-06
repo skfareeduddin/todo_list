@@ -39,7 +39,7 @@ class _EditNoteScreenState extends State<EditNoteScreen> {
               Note(
                 title: newTitle,
                 content: newContent,
-                timeStamp: DateFormat('dd-MM-yyyy HH:mm').format(
+                timeStamp: DateFormat('dd-MM-yyyy HH:mm:ss').format(
                   DateTime.now(),
                 ),
               ),

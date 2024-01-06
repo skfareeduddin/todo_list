@@ -37,7 +37,7 @@ class _AddNoteScreenState extends State<AddNoteScreen> {
                 title: title,
                 content: content,
                 timeStamp:
-                    DateFormat('dd-MM-yyyy HH:mm').format(DateTime.now()),
+                    DateFormat('dd-MM-yyyy HH:mm:ss').format(DateTime.now()),
               ),
             );
         const snackBar = SnackBar(
