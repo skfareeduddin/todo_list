@@ -76,7 +76,7 @@ class HomeScreen extends StatelessWidget {
                         'Note deleted successfully!',
                         style: TextStyle(fontSize: 16.0),
                       ),
-                      duration: Duration(seconds: 2),
+                      duration: Duration(seconds: 1),
                     );
                     ScaffoldMessenger.of(context).showSnackBar(snackBar);
                   },

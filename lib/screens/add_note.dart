@@ -45,7 +45,7 @@ class _AddNoteScreenState extends State<AddNoteScreen> {
             'Note created successfully!',
             style: TextStyle(fontSize: 16.0),
           ),
-          duration: Duration(seconds: 2),
+          duration: Duration(seconds: 1),
         );
         Navigator.pop(context);
         ScaffoldMessenger.of(context).showSnackBar(snackBar);
@@ -98,23 +98,30 @@ class _AddNoteScreenState extends State<AddNoteScreen> {
                 decoration: const InputDecoration(labelText: 'Enter Content'),
               ),
               const SizedBox(height: 30),
-              ElevatedButton(
-                style: ButtonStyle(
-                  shape: MaterialStateProperty.all(
-                    const RoundedRectangleBorder(
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(5.0),
+              SizedBox(
+                height: 50.0,
+                child: ElevatedButton(
+                  style: ButtonStyle(
+                    shape: MaterialStateProperty.all(
+                      const RoundedRectangleBorder(
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(5.0),
+                        ),
                       ),
                     ),
+                    backgroundColor:
+                        MaterialStateProperty.all(Colors.blueAccent),
                   ),
-                  backgroundColor: MaterialStateProperty.all(Colors.blueAccent),
-                ),
-                onPressed: () {
-                  createNote();
-                },
-                child: const Text(
-                  'Add Note',
-                  style: TextStyle(color: Colors.white),
+                  onPressed: () {
+                    createNote();
+                  },
+                  child: const Text(
+                    'Add Note',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 16.0,
+                    ),
+                  ),
                 ),
               ),
             ],

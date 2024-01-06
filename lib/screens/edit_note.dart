@@ -50,7 +50,7 @@ class _EditNoteScreenState extends State<EditNoteScreen> {
             'Note edited successfully!',
             style: TextStyle(fontSize: 16.0),
           ),
-          duration: Duration(seconds: 2),
+          duration: Duration(seconds: 1),
         );
         ScaffoldMessenger.of(context).showSnackBar(snackBar);
         Navigator.pop(context);
@@ -103,23 +103,27 @@ class _EditNoteScreenState extends State<EditNoteScreen> {
                 decoration: const InputDecoration(labelText: 'Enter Content'),
               ),
               const SizedBox(height: 30),
-              ElevatedButton(
-                style: ButtonStyle(
-                  shape: MaterialStateProperty.all(
-                    const RoundedRectangleBorder(
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(5.0),
+              SizedBox(
+                height: 50.0,
+                child: ElevatedButton(
+                  style: ButtonStyle(
+                    shape: MaterialStateProperty.all(
+                      const RoundedRectangleBorder(
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(5.0),
+                        ),
                       ),
                     ),
+                    backgroundColor:
+                        MaterialStateProperty.all(Colors.blueAccent),
                   ),
-                  backgroundColor: MaterialStateProperty.all(Colors.blueAccent),
-                ),
-                onPressed: () {
-                  saveNote();
-                },
-                child: const Text(
-                  'Edit Note',
-                  style: TextStyle(color: Colors.white),
+                  onPressed: () {
+                    saveNote();
+                  },
+                  child: const Text(
+                    'Edit Note',
+                    style: TextStyle(color: Colors.white),
+                  ),
                 ),
               ),
             ],
