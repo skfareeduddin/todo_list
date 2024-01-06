@@ -12,8 +12,10 @@ class TODOList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (BuildContext context) => NoteProvider(),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (context) => NoteProvider()),
+      ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'TODO List App',
