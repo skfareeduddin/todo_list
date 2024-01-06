@@ -3,7 +3,7 @@ import '../models/note.dart';
 import '../utils/database_helper.dart';
 
 class NoteProvider extends ChangeNotifier {
-  DatabaseHelper _databaseHelper = DatabaseHelper();
+  final DatabaseHelper _databaseHelper = DatabaseHelper();
   List<Note> _notes = [];
 
   List<Note> get notes => _notes;
