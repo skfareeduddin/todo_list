@@ -71,6 +71,13 @@ class HomeScreen extends StatelessWidget {
                   },
                   onLongPress: () {
                     noteProvider.removeNote(index);
+                    const snackBar = SnackBar(
+                      content: Text(
+                        'Note deleted successfully!',
+                        style: TextStyle(fontSize: 16.0),
+                      ),
+                    );
+                    ScaffoldMessenger.of(context).showSnackBar(snackBar);
                   },
                 );
               },

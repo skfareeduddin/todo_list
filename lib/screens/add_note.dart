@@ -42,7 +42,7 @@ class _AddNoteScreenState extends State<AddNoteScreen> {
             );
         const snackBar = SnackBar(
           content: Text(
-            'Note created!',
+            'Note created successfully!',
             style: TextStyle(fontSize: 16.0),
           ),
         );
