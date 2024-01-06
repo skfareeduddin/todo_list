@@ -56,10 +56,15 @@ class HomeScreen extends StatelessWidget {
               itemBuilder: (context, index) {
                 final notes = noteProvider.notes[index];
                 return ListTile(
-                  title: Text(notes.title),
-                  subtitle: Text(notes.content),
+                  title: Text(notes.title.length > 15
+                      ? '${notes.title.substring(0, 15)}...'
+                      : notes.title),
+                  subtitle: Text(notes.content.length > 32
+                      ? '${notes.content.substring(0, 32)}...'
+                      : notes.content),
                   trailing: Text(
-                    'Last updated at: ${notes.timeStamp}',
+                    'Last updated at:\n${notes.timeStamp}',
+                    textAlign: TextAlign.center,
                   ),
                   onTap: () {
                     goToEditNote(context, index);

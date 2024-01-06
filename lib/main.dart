@@ -15,6 +15,7 @@ class TODOList extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (BuildContext context) => NoteProvider(),
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         title: 'TODO List App',
         initialRoute: '/home',
         routes: {
