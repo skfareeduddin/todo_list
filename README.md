@@ -3,6 +3,7 @@ Code Documentation - TODO List App
 Overview:-
 TODO List is a Flutter-based mobile application designed to help users manage tasks efficiently. This documentation provides an overview of the code structure, key decisions, and instructions for running and testing the app.
 
+
 Code Structure:-
 The code is organised following the Flutter framework conventions. Here is an overview of the main components:
 
@@ -20,14 +21,16 @@ add_note.dart: Screen for adding a new note.
 edit_note.dart: Screen for editing an existing note.
 home_screen.dart: Main screen displaying a list of tasks/notes.
 
+utils: Contains utility classes and helpers.
+database_helper.dart: Uses `shared_preferences` for local data storage.
+
+
 Packages Used:-
 The following Flutter packages are utilised in this project:
 
 shared_preferences(2.2.2): Used for persistent storage of simple data, such as user preferences.
 provider(6.1.1): A state management solution to manage and propagate the state changes across the app.
 intl(0.19.0): Provides internationalisation and localization support for formatting dates and numbers.
-
-
 
 
 Important Decisions:-
@@ -37,7 +40,6 @@ State Management: The app uses the Provider package for state management. The `N
 Navigation: Navigation between screens is handled through the `MaterialApp` widget. Routes are defined in the `main.dart` file.
 
 Design Principles: The app follows the Material Design principles for a clean and intuitive user interface.
-
 
 
 How to Run/Test the App:-
@@ -57,5 +59,3 @@ Connect a physical device or start an emulator
 Run the App: Use the command, “flutter run”. This command will build and run the app on your connected device or emulator.
 
 Testing: Unit and widget tests are located in the test directory. Run tests using the command, “flutter test”
-
-
